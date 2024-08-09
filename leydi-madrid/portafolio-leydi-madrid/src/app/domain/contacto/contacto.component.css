@@ -1,0 +1,99 @@
+.contacto {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2em;
+  margin-bottom: 4em;
+}
+
+.contenedor__form {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  border-radius: 10px;
+  background-color: #2a2d45;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  gap: 2em;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  color: white;
+}
+
+input {
+  text-decoration: none;
+  border: 1px solid #552d99;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+input:hover {
+  text-decoration: none;
+  border: 2px solid #552d99;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.bx {
+    font-size: 20px;
+}
+
+.botonPrimario {
+  display: flex;
+  gap: 0.5em;
+  width: 130px;
+  text-decoration: none;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #5d3a9b;
+  border-radius: 2rem;
+  font-family: "Poppins";
+  font-size: 1em;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.botonPrimario:hover {
+  width: 130px;
+  text-decoration: none;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #552d99;
+  border-radius: 3.125rem;
+  font-family: "Poppins";
+  font-size: 1em;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.8s eas;
+}
+
+.contenedor__botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+}

@@ -4,6 +4,8 @@ import { CardProyectoComponent } from '../components/card-proyecto/card-proyecto
 import { FooterComponent } from '../footer/footer.component';
 import { StackDesarrolloService } from '../services/stack-desarrollo.service';
 import { CommonModule } from '@angular/common';
+import { ContactoComponent } from "../contacto/contacto.component";
+import 'animate.css'
 
 @Component({
   selector: 'app-landing-page',
@@ -13,7 +15,8 @@ import { CommonModule } from '@angular/common';
     CardProyectoComponent,
     FooterComponent,
     CommonModule,
-  ],
+    ContactoComponent
+],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
 })
