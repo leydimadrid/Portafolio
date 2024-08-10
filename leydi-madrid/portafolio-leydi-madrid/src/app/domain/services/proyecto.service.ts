@@ -41,7 +41,7 @@ export class ProyectoService {
         { icono: 'bx bxl-angular', nombre: 'Angular 17' },
         { icono: 'bx bxl-tailwind-css', nombre: 'Tailwind CSS' },
       ],
-      github: '',
+      github: 'https://store-omega-black.vercel.app/',
       url: 'https://store-omega-black.vercel.app/',
     },
   ];

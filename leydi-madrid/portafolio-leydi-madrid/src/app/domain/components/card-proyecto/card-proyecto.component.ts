@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { ProyectoService } from '../../services/proyecto.service';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-card-proyecto',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './card-proyecto.component.html',
   styleUrl: './card-proyecto.component.css'
 })
