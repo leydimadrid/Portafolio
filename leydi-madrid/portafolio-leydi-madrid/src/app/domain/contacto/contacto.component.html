@@ -1,36 +1,90 @@
 <section class="contacto">
   <div><h2>Contacto</h2></div>
   <div class="contenedor__form" id="contacto">
-    <form>
+    <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
       <div class="campos">
         <label for="nombreusuario"
-          ><i class="bx bx-user" style="color: white"></i>Nombre
-          completo</label
+          ><i class="bx bx-user" style="color: white"></i>Nombre completo</label
         >
         <input
           type="text"
-          name="nombrecompleto"
-          id="nombrecompleto"
-          placeholder="Nombre completo"
+          name="name"
+          id="name"
+          required
+          formControlName="name"
+          (blur)="onFieldBlur($event)"
         />
+        @if (contactForm.get('name')?.touched &&
+        contactForm.get('name')?.errors?.['required']) {
+        <div class="error">Este campo es requerido</div>
+        } @if (contactForm.get('name')?.touched &&
+        contactForm.get('name')?.errors?.['minlength']) {
+        <div class="error">
+          El nombre debe tener más de
+          {{contactForm.get('name')?.errors?.['minlength']?.requiredLength}}
+          carácteres
+        </div>
+        }
       </div>
+
       <div class="campos">
         <label for="email"
           ><i class="bx bx-envelope" style="color: white"></i>Email</label
         >
-        <input type="email" name="email" id="email" placeholder="Email" />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          formControlName="email"
+          (blur)="onFieldBlur($event)"
+        />
+        @if (contactForm.get('email')?.touched &&
+        contactForm.get('email')?.errors?.['email']) {
+        <div class="error">Por favor, ingresa un email válido</div>
+        } @if (contactForm.get('email')?.touched &&
+        contactForm.get('email')?.errors?.['required']) {
+        <div class="error">Este campo es requerido</div>
+        }
       </div>
       <div class="campos">
         <label for="comentarios"
           ><i class="bx bx-message-detail" style="color: white"></i
           >Mensaje</label
         >
-        <input type="text" id="comentarios" placeholder="Mensaje" />
+        <input
+          type="text"
+          name="text"
+          id="text"
+          required
+          formControlName="text"
+          (blur)="onFieldBlur($event)"
+          appInputError="nombre.invalid && (nombre.dirty || nombre.touched)"
+        />
+        @if (contactForm.get('text')?.touched &&
+        contactForm.get('text')?.errors?.['required']) {
+        <div class="error">Este campo es requerido</div>
+        } @if (contactForm.get('text')?.touched &&
+        contactForm.get('text')?.errors?.['maxlength']) {
+        <div class="error">
+          El límite de carácteres es
+          {{contactForm.get('text')?.errors?.['maxlength']?.requiredLength}}
+        </div>
+        }
       </div>
       <div class="contenedor__botones">
-        <button type="reset" class="botonPrimario">Reset</button>
         <button type="submit" class="botonPrimario">Enviar</button>
       </div>
+      @if ( camposVaciosSubmit && contactForm.invalid && contactForm.untouched )
+      {
+      <div class="error">
+        {{ camposVaciosSubmit }}
+      </div>
+      } @if (formularioEnviado) {
+      <div class="success">
+        {{ formularioEnviado }}
+      </div>
+      }
     </form>
   </div>
 </section>

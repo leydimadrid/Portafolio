@@ -3,7 +3,7 @@ import { HeaderComponent } from '../header/header.component';
 import { CardProyectoComponent } from '../components/card-proyecto/card-proyecto.component';
 import { FooterComponent } from '../footer/footer.component';
 import { StackDesarrolloService } from '../services/stack-desarrollo.service';
-import { CommonModule } from '@angular/common';
+
 import { ContactoComponent } from "../contacto/contacto.component";
 import 'animate.css'
 
@@ -14,7 +14,6 @@ import 'animate.css'
     HeaderComponent,
     CardProyectoComponent,
     FooterComponent,
-    CommonModule,
     ContactoComponent
 ],
   templateUrl: './landing-page.component.html',
