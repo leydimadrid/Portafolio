@@ -1,0 +1,123 @@
+.contacto {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2em;
+  width: 100%;
+  padding: 32px;
+  background-color: #181a2d;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor__form {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #000000;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #df4b4b;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #000000;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #b9e4c3;
+}
+
+form {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 2em;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  color: white;
+}
+
+input {
+  text-decoration: none;
+  border: 1px solid #552d99;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+input:focus {
+  box-shadow: 0 0 0 3px #552d99;
+}
+
+input:hover {
+  text-decoration: none;
+  border: 2px solid #552d99;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.input-error {
+  border: 1px solid #ff0000; /* rojo */
+  background-color: #ffc0c0; /* fondo rosa claro */
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.bx {
+  font-size: 20px;
+}
+
+.botonPrimario {
+  display: flex;
+  gap: 0.5em;
+  width: 130px;
+  text-decoration: none;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #5d3a9b;
+  border-radius: 2rem;
+  font-family: "Poppins";
+  font-size: 1em;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.botonPrimario:hover {
+  width: 130px;
+  text-decoration: none;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #552d99;
+  border-radius: 3.125rem;
+  font-family: "Poppins";
+  font-size: 1em;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.8s eas;
+}
+
+.contenedor__botones {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
