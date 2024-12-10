@@ -1,0 +1,35 @@
+<div id="proyectos" class="flex flex-col mt-16 gap-10">
+  <h2 class="text-3xl font-semibold text-center">Proyectos</h2>
+  @for (proyecto of ProyectoService.datosProyecto; track proyecto) {
+
+  <div class="grid lg:grid-cols-2 lg:px-0 px-6 gap-6">
+    <img
+      class="w-96 rounded-xl m-auto"
+      [src]="proyecto.img"
+      [alt]="proyecto.titulo"
+      loading="lazy"
+    />
+    <div class="gap-4 flex flex-col 2xl:w-full lg:w-96 sm:w-3/5 justify-center m-auto">
+      <div>
+        <h2 class="card-title text-white">{{ proyecto.titulo }}</h2>
+        <p class="text-white">{{ proyecto.descripcion }}</p>
+      </div>
+      <div class="space-x-3">
+        @for (tecnologia of proyecto.tecnologias; track tecnologia) {
+        <a class="badge badge-neutral py-1 px-2 text-xs gap-2">
+          <img class="w-4" [src]="tecnologia.icono" [alt]="tecnologia.alt" loading="lazy"/> <p class="font-semibold">{{ tecnologia.nombre }}</p>
+        </a>
+        }
+      </div>
+      <div class="card-actions justify-start">
+        <a [href]="proyecto.github" target="_blank" class="btn">
+          <i class="bx bxl-github text-xl"></i>GitHub</a
+        >
+        <a class="btn btn-neutral" [href]="proyecto.url" target="_blank"
+          ><i class="bx bx-link-external text-xl"></i>Ver proyecto</a
+        >
+      </div>
+    </div>
+  </div>
+  }
+</div>

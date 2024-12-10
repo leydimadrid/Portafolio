@@ -1,0 +1,92 @@
+<main>
+  <div class="contenedor__principal">
+    <app-header></app-header>
+    <header>
+      <section class="banner" id="inicio">
+        <div class="banner__informacion">
+          <div class="contenedor__titulos">
+            <div class="flex lg:flex-row flex-col gap-6 items-center">
+              <h2 class="banner__titulo__principal">¡Hola! 👋🏻 Soy Leydi</h2>
+              <app-download></app-download>
+            </div>
+            <div class="flex justify-center">
+              <h1 class="banner__titulo__secundario">
+                Diseñadora UI & Desarrolladora Frontend
+              </h1>
+            </div>
+          </div>
+          <div class="contenedor__redes">
+            <a
+              class="enlace__redes"
+              href="https://www.linkedin.com/in/leydimadrid/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="bx bxl-linkedin-square"></i>LinkedIn</a
+            >
+            <a
+              class="enlace__redes"
+              href="https://github.com/leydimadrid"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bx bxl-github"></i>GitHub</a
+            >
+            <a
+              class="enlace__redes"
+              href="https://www.behance.net/LeydiMadrid"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bx bxl-behance"></i>Behance</a
+            >
+          </div>
+        </div>
+
+        <img
+          class="drop-shadow-lg w-80  hidden sm:hidden md:block lg:block xl:block 2xl:block m-auto"
+          src="../../../assets/avatar.png"
+          alt="Avatar mujer Developer"
+          loading="lazy"
+        />
+      </section>
+    </header>
+    <section class="acerca" id="acerca">
+      <img
+        class="mask mask-squircle lg:w-96 w-72 m-auto"
+        src="../../../assets/foto_leydi.jpg"
+        alt="Foto Leydi Madrid"
+        loading="lazy"
+      />
+      <section class="acerca__informacion">
+        <h2 class="text-2xl font-semibold px-6">Sobre mí</h2>
+        <p class="px-6">
+          Apasionada Diseñadora UI y Desarrolladora Front-end. Soy una mujer
+          autodidacta y durante los últimos 3 años he tenido el privilegio de
+          sumergirme en este maravilloso mundo, me encanta estar en constante
+          aprendizaje. Me especializo en crear experiencias de usuario
+          intuitivas y visualmente atractivas.
+        </p>
+      </section>
+    </section>
+    <section class="contenedor__habilidades">
+      <div>
+        <h2 class="text-2xl font-semibold text-center">Stack de desarrollo</h2>
+      </div>
+      <div class="contenedor__stack">
+        @for (stack of stackDesarrolloService.stackDesarrollo; track stack) {
+        <div class="stack">
+          <img
+            class="w-6"
+            [src]="stack.icono"
+            [alt]="stack.alt"
+            loading="lazy"
+          />
+          <p>{{ stack.nombre }}</p>
+        </div>
+        }
+      </div>
+    </section>
+    <app-card-proyecto></app-card-proyecto>
+    <app-footer></app-footer>
+  </div>
+</main>

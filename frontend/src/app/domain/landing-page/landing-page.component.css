@@ -1,0 +1,56 @@
+main {
+  @apply flex justify-center;
+}
+
+.contenedor__principal {
+  @apply  2xl:w-2/4 xl:w-4/5 lg:w-4/5 md:w-4/5 flex flex-col gap-8;
+}
+
+.contenedor__redes {
+  @apply flex flex-wrap 2xl:gap-8 xl:gap-6 lg:gap-4 gap-6 lg:justify-start justify-center;
+}
+
+.enlace__redes {
+  @apply flex flex-row gap-1 lg:text-base text-sm items-center justify-center text-white bg-gray-700 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:border-purple-700 font-medium rounded-full lg:px-4 lg:py-2 px-2 py-1 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700;
+}
+
+.contenedor__titulos {
+  @apply flex flex-col gap-4;
+}
+
+.banner__titulo__principal {
+  @apply lg:text-2xl text-xl text-yellow-300 font-semibold lg:text-start text-center;
+}
+
+.banner__titulo__secundario {
+  @apply lg:text-4xl text-xl text-white font-semibold lg:text-start text-center lg:max-w-full max-w-72;
+}
+
+.banner {
+  @apply grid lg:grid-cols-2 gap-11;
+}
+
+.acerca {
+  @apply grid lg:grid-cols-3 mt-16 gap-6 lg:text-start text-justify;
+}
+
+.banner__informacion,
+.contenedor__habilidades {
+  @apply flex flex-col gap-10 justify-center lg:mt-16;
+}
+
+.acerca__informacion {
+  @apply flex flex-col gap-6 justify-center 2xl:col-span-2 lg:col-span-2 md:col-span-2  m-auto;
+}
+
+.stack p {
+  @apply w-auto;
+}
+
+.contenedor__stack {
+  @apply grid 2xl:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 gap-4 max-w-2xl m-auto;
+}
+
+.stack {
+  @apply flex flex-row gap-1 badge badge-neutral px-4 py-6 text-base w-44;
+}
