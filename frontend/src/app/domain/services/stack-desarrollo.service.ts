@@ -23,12 +23,7 @@ export class StackDesarrolloService {
       icono: '../../../assets/reactJS.svg',
       nombre: 'React JS',
       alt: 'Icono React JS',
-    },
-    {
-      icono: '../../../assets/angular.png',
-      nombre: 'Angular 18',
-      alt: 'Icono Angular 18',
-    },
+    }
   ];
 
   constructor() {}
